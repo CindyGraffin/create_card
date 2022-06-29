@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+input, span {
+    margin-bottom: 1rem;
+}
+h1 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+.card__container {
+    background-color: rgb(128, 204, 179);
+    border-radius: 25px;
+    width: 28rem;
+    color: white;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.card__company {
+    background-color: rgb(160, 226, 204);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 0rem 1.2rem 0.1rem 0rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+.card__name {
+    margin-left: 0.8rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.card__infos {
+    margin-left: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+button {
+    display: flex;
+    margin: 0 auto;
+}

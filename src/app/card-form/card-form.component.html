@@ -1,0 +1,58 @@
+<form [formGroup]="user" (ngSubmit)="onSubmit()">
+    <label for="lastName">Nom:</label>
+    <input type="text" formControlName="lastName" minlength="2"/>
+    <span *ngIf="form['lastName'].hasError('minlength') && submitted">
+        * Nom invalide
+    </span>
+    <span *ngIf="form['lastName'].hasError('required') && submitted">
+        * Nom obligatoire
+    </span>
+    <label for="firstName">Prénom:</label>
+    <input type="text" formControlName="firstName" />
+    <span *ngIf="form['firstName'].hasError('minlength') && submitted">
+        * Prénom invalide
+    </span>
+    <span *ngIf="form['company'].hasError('required') && submitted">
+        * Prénom obligatoire
+    </span>
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email" />
+    <span *ngIf="form['email'].hasError('email') && submitted">
+        * Email invalide
+    </span>
+    <span *ngIf="form['email'].hasError('required') && submitted">
+        * Email obligatoire
+    </span>
+    <label for="company">Entreprise:</label>
+    <input type="text" formControlName="company" />
+    <span *ngIf="form['company'].hasError('minlength') && submitted">
+        * Entreprise invalide
+    </span>
+    <span *ngIf="form['company'].hasError('required') && submitted">
+        * Entreprise obligatoire
+    </span>
+    <label for="phone">Téléphone:</label>
+    <input type="phone" formControlName="phone" />
+    <span *ngIf="form['phone'].hasError('minlength') && submitted">
+        * Téléphone invalide
+    </span>
+    <span *ngIf="form['phone'].hasError('required') && submitted">
+        * Téléphone obligatoire
+    </span>
+    <button type="submit">Créer la carte de visite</button>
+</form>
+<h1>Cartes de visite</h1>
+<div *ngFor="let user of users">
+    <div class="card__container">
+        <div class="card__company">
+            <p>{{ user.company }}</p>
+        </div>
+        <div class="card__name">
+            <p>{{ user.lastName }} {{ user.firstName }}</p>
+        </div>
+        <div class="card__infos">
+            <p>Email: {{ user.email }}</p>
+            <p>Téléphone: {{ user.phone }}</p>
+        </div>
+    </div>
+</div>

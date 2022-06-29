@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(220, 245, 241);
+}
+input {
+    border-radius: 15px;
+    border: none;
+    height: 2rem;
+}
+button {
+    border-radius: 25px;
+    border: none;
+    box-shadow: rgb(170, 170, 170) 2px 2px 2px;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(128, 204, 179);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+h1 {
+    color: rgb(109, 109, 109);
+    border-top: 1px solid;
+    margin-top: 2rem;
+}
